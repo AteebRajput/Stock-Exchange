@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stocks Data</title>
+  <link rel="stylesheet" href="./stocks.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- swiper js cdn -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <h1>"Navigate the Financial Frontier: Your Go-To Source for Stocks, Crypto, and Exchange Rates"</h1>
+  </nav>
+  <div class="bars-icon">
+    <button class="btn-icon" id="btn-icon">
+      <i id="side-icon" class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="side-bar" id="side-bar">
+    <div class="title">
+      <div class="logo">
+        <h1><i class="fa-solid fa-landmark icon-tag"></i>FinCryptX</h1>
+      </div>
+    </div>
+    <div class="list">
+      <ul>
+        <li>
+          <a href="#market-trend"><i class="fa-solid fa-money-bill-trend-up"></i>Market Trends</a>
+        </li>
+        <li>
+          <a href="#stock-quote"><i class="fa-solid fa-arrow-trend-up"></i>Stock Quote</a>
+        </li>
+        <li>
+          <a href="#stock-news"><i class="fa-regular fa-newspaper"></i>Stock News</a>
+        </li>
+        <li>
+          <a href="#stock-company-overview"><i class="fa-solid fa-expand"></i>Stock / Company Overview</a>
+        </li>
+        <li>
+          <a href="#stock-income-statement"><i class="fa-solid fa-sack-dollar"></i>Company Income Statement</a>
+        </li>
+        <li>
+          <a href="./index.html"><i class="fa-regular fa-circle-left"></i>Back To HomePage</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="trend" id="market-trend">
+      <section>
+        <!--for demo wrap-->
+        <div id="header">
+
+          <h1><i class="fa-solid fa-money-bill-trend-up"></i>Market Trends</h1>
+        </div>
+        <div class="table-container">
+          <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Symbol</th>
+                  <th>Price</th>
+                  <th>Previous Close</th>
+                  <th>Change</th>
+                  <th>Change %</th>
+                  <th>Timezone</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="quote" id="stock-quote">
+      <div class="heading" id="header">
+        <h1><i class="fa-solid fa-arrow-trend-up"></i>Stock Quote</h1>
+      </div>
+      <div class="quote-container">
+        <div class="quote-data">
+          <select name="select-quote" id="select-quote">
+            <option value="AAPL">Apple Inc.</option>
+            <option value="MSFT">Microsoft Corporation</option>
+            <option value="GOOGL">Alphabet Inc.</option>
+            <option value="AMZN">Amazon.com Inc.</option>
+            <option value="TSLA">Tesla Inc.</option>
+            <option value="FB">Meta Platforms Inc.</option>
+            <option value="BRK.B">Berkshire Hathaway Inc.</option>
+            <option value="NVDA">NVIDIA Corporation</option>
+            <option value="JNJ">Johnson & Johnson</option>
+            <option value="V">Visa Inc.</option>
+            <option value="WMT">Walmart Inc.</option>
+            <option value="JPM">JPMorgan Chase & Co.</option>
+            <option value="PG">Procter & Gamble Co.</option>
+            <option value="MA">Mastercard Inc.</option>
+            <option value="DIS">Walt Disney Co.</option>
+            <option value="PYPL">PayPal Holdings Inc.</option>
+            <option value="NFLX">Netflix Inc.</option>
+            <option value="INTC">Intel Corporation</option>
+            <option value="CSCO">Cisco Systems Inc.</option>
+            <option value="PEP">PepsiCo Inc.</option>
+            <option value="KO">Coca-Cola Company</option>
+            <option value="NKE">Nike Inc.</option>
+            <option value="T">AT&T Inc.</option>
+            <option value="XOM">Exxon Mobil Corporation</option>
+            <option value="VZ">Verizon Communications Inc.</option>
+            <option value="BA">Boeing Co.</option>
+            <option value="MMM">3M Company</option>
+            <option value="MCD">McDonald's Corporation</option>
+            <option value="IBM">International Business Machines Corporation</option>
+            <option value="GE">General Electric Company</option>
+            <option value="F">Ford Motor Company</option>
+            <option value="GM">General Motors Company</option>
+            <option value="SBUX">Starbucks Corporation</option>
+            <option value="CVX">Chevron Corporation</option>
+            <option value="ORCL">Oracle Corporation</option>
+            <option value="HON">Honeywell International Inc.</option>
+            <option value="UNH">UnitedHealth Group Incorporated</option>
+            <option value="PFE">Pfizer Inc.</option>
+            <option value="MRK">Merck & Co., Inc.</option>
+            <option value="ABT">Abbott Laboratories</option>
+            <option value="LLY">Eli Lilly and Company</option>
+            <option value="TMO">Thermo Fisher Scientific Inc.</option>
+            <option value="BMY">Bristol-Myers Squibb Company</option>
+            <option value="GILD">Gilead Sciences Inc.</option>
+            <option value="SNY">Sanofi</option>
+            <option value="AZN">AstraZeneca PLC</option>
+            <option value="NVS">Novartis AG</option>
+            <option value="ROG.VX">Roche Holding AG</option>
+            <option value="TSM">Taiwan Semiconductor Manufacturing Company Limited</option>
+            <option value="BABA">Alibaba Group Holding Limited</option>
+            <option value="RIO">Rio Tinto Group</option>
+            <option value="RDS.A">Royal Dutch Shell PLC</option>
+            <option value="BP">BP p.l.c.</option>
+            <option value="TOT">TotalEnergies SE</option>
+            <option value="UL">Unilever PLC</option>
+            <option value="HSBC">HSBC Holdings plc</option>
+            <option value="SNP">China Petroleum & Chemical Corporation</option>
+            <option value="PTR">PetroChina Company Limited</option>
+            <option value="VALE">Vale S.A.</option>
+            <option value="BBL">BHP Group plc</option>
+            <option value="TM">Toyota Motor Corporation</option>
+            <option value="NSRGY">Nestlé S.A.</option>
+            <option value="SAP">SAP SE</option>
+            <option value="ORAN">Orange S.A.</option>
+            <option value="SIEGY">Siemens AG</option>
+            <option value="DTEGY">Deutsche Telekom AG</option>
+            <option value="BAYRY">Bayer AG</option>
+            <option value="SNY">Sanofi</option>
+            <option value="CNI">Canadian National Railway Company</option>
+            <option value="TD">Toronto-Dominion Bank</option>
+            <option value="RY">Royal Bank of Canada</option>
+            <option value="ENB">Enbridge Inc.</option>
+            <option value="SU">Suncor Energy Inc.</option>
+            <option value="MFC">Manulife Financial Corporation</option>
+            <option value="BNS">Bank of Nova Scotia</option>
+            <option value="CS">Credit Suisse Group AG</option>
+            <option value="UBS">UBS Group AG</option>
+            <option value="NOVN.VX">Novartis AG</option>
+            <option value="NESN.VX">Nestlé S.A.</option>
+            <option value="ADBE">Adobe Inc.</option>
+            <option value="CRM">Salesforce.com Inc.</option>
+            <option value="ACN">Accenture plc</option>
+            <option value="AVGO">Broadcom Inc.</option>
+            <option value="TXN">Texas Instruments Incorporated</option>
+            <option value="QCOM">QUALCOMM Incorporated</option>
+            <option value="AMD">Advanced Micro Devices Inc.</option>
+            <option value="IBM">International Business Machines Corporation</option>
+            <option value="AMAT">Applied Materials Inc.</option>
+            <option value="ADI">Analog Devices Inc.</option>
+            <option value="LRCX">Lam Research Corporation</option>
+            <option value="MU">Micron Technology Inc.</option>
+            <option value="KLAC">KLA Corporation</option>
+            <option value="NXPI">NXP Semiconductors N.V.</option>
+            <option value="MCHP">Microchip Technology Incorporated</option>
+            <option value="SWKS">Skyworks Solutions Inc.</option>
+            <option value="WDC">Western Digital Corporation</option>
+            <option value="STX">Seagate Technology Holdings PLC</option>
+            <option value="NVTA">Invitae Corporation</option>
+            <option value="ARKK">ARK Innovation ETF</option>
+            <option value="SPY">SPDR S&P 500 ETF Trust</option>
+            <option value="IVV">iShares Core S&P 500 ETF</option>
+            <option value="VOO">Vanguard S&P 500 ETF</option>
+            <option value="QQQ">Invesco QQQ Trust</option>
+            <option value="VTI">Vanguard Total Stock Market ETF</option>
+            <option value="BND">Vanguard Total Bond Market ETF</option>
+            <option value="GLD">SPDR Gold Shares</option>
+            <option value="SLV">iShares Silver Trust</option>
+            <option value="XLF">Financial Select Sector SPDR Fund</option>
+            <option value="XLK">Technology Select Sector SPDR Fund</option>
+            <option value="XLE">Energy Select Sector SPDR Fund</option>
+            <option value="XLV">Health Care Select Sector SPDR Fund</option>
+            <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+            <option value="XLI">Industrial Select Sector SPDR Fund</option>
+            <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+            <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+            <option value="XLU">Utilities Select Sector SPDR Fund</option>
+            <option value="XLB">Materials Select Sector SPDR Fund</option>
+            <option value="IWM">iShares Russell 2000 ETF</option>
+            <option value="VT">Vanguard Total World Stock ETF</option>
+            <option value="VEA">Vanguard FTSE Developed Markets ETF</option>
+            <option value="VWO">Vanguard FTSE Emerging Markets ETF</option>
+            <option value="EFA">iShares MSCI EAFE ETF</option>
+            <option value="EEM">iShares MSCI Emerging Markets ETF</option>
+            <option value="IEMG">iShares Core MSCI Emerging Markets ETF</option>
+            <option value="AGG">iShares Core U.S. Aggregate Bond ETF</option>
+            <option value="LQD">iShares iBoxx $ Investment Grade Corporate Bond ETF</option>
+            <option value="HYG">iShares iBoxx $ High Yield Corporate Bond ETF</option>
+            <option value="JNK">SPDR Bloomberg Barclays High Yield Bond ETF</option>
+            <option value="BKLN">Invesco Senior Loan ETF</option>
+            <option value="SHV">iShares Short Treasury Bond ETF</option>
+            <option value="TLT">iShares 20+ Year Treasury Bond ETF</option>
+            <option value="IEF">iShares 7-10 Year Treasury Bond ETF</option>
+            <option value="SHY">iShares 1-3 Year Treasury Bond ETF</option>
+            <option value="MUB">iShares National Muni Bond ETF</option>
+            <option value="PFF">iShares Preferred and Income Securities ETF</option>
+            <option value="PGX">Invesco Preferred ETF</option>
+            <option value="VCSH">Vanguard Short-Term Corporate Bond ETF</option>
+            <option value="VCIT">Vanguard Intermediate-Term Corporate Bond ETF</option>
+            <option value="VGLT">Vanguard Long-Term Treasury ETF</option>
+            <option value="BSV">Vanguard Short-Term Bond ETF</option>
+            <option value="BIV">Vanguard Intermediate-Term Bond ETF</option>
+            <option value="TLH">iShares 10-20 Year Treasury Bond ETF</option>
+            <option value="GLDM">SPDR Gold MiniShares Trust</option>
+            <option value="IAU">iShares Gold Trust</option>
+            <option value="SPLV">Invesco S&P 500 Low Volatility ETF</option>
+            <option value="USMV">iShares MSCI USA Min Vol Factor ETF</option>
+            <option value="MTUM">iShares MSCI USA Momentum Factor ETF</option>
+            <option value="QUAL">iShares MSCI USA Quality Factor ETF</option>
+            <option value="VLUE">iShares MSCI USA Value Factor ETF</option>
+            <option value="SPYG">SPDR S&P 500 Growth ETF</option>
+            <option value="SPYV">SPDR S&P 500 Value ETF</option>
+            <option value="IWF">iShares Russell 1000 Growth ETF</option>
+            <option value="IWD">iShares Russell 1000 Value ETF</option>
+            <option value="IWO">iShares Russell 2000 Growth ETF</option>
+            <option value="IWN">iShares Russell 2000 Value ETF</option>
+            <option value="VBR">Vanguard Small-Cap Value ETF</option>
+            <option value="VBK">Vanguard Small-Cap Growth ETF</option>
+            <option value="VTV">Vanguard Value ETF</option>
+            <option value="VUG">Vanguard Growth ETF</option>
+            <option value="SCHD">Schwab U.S. Dividend Equity ETF</option>
+            <option value="VYM">Vanguard High Dividend Yield ETF</option>
+            <option value="DVY">iShares Select Dividend ETF</option>
+            <option value="SDY">SPDR S&P Dividend ETF</option>
+            <option value="SPHD">Invesco S&P 500 High Dividend Low Volatility ETF</option>
+            <option value="HDV">iShares Core High Dividend ETF</option>
+            <option value="NOBL">ProShares S&P 500 Dividend Aristocrats ETF</option>
+            <option value="VIG">Vanguard Dividend Appreciation ETF</option>
+            <option value="DIA">SPDR Dow Jones Industrial Average ETF Trust</option>
+            <option value="XLU">Utilities Select Sector SPDR Fund</option>
+            <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+            <option value="XLK">Technology Select Sector SPDR Fund</option>
+            <option value="XLF">Financial Select Sector SPDR Fund</option>
+            <option value="XLV">Health Care Select Sector SPDR Fund</option>
+            <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+            <option value="XLI">Industrial Select Sector SPDR Fund</option>
+            <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+            <option value="XLE">Energy Select Sector SPDR Fund</option>
+            <option value="XLB">Materials Select Sector SPDR Fund</option>
+
+          </select>
+          <select name="interval" id="interval" class="interval">
+            <option value="1min">1min</option>
+            <option value="5min">5min</option>
+            <option value="15min">15min</option>
+            <option value="30min">30min</option>
+            <option value="1hour">1hour</option>
+            <option value="4hour">4hour</option>
+
+          </select>
+          <button class="button" id="quote-button">
+            GET QUOTE
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="quote-card">
+          <h1>Key Statitics:</h1>
+          <div class="quote-card__row" id="quoteCardRow">
+            <div class="data-card">
+              <h3>Open</h3>
+              <p class="price">$1300</p>
+            </div>
+          </div>
+          <div class="historical-data-container">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Open</th>
+                    <th>Close</th>
+                    <th>Low</th>
+                    <th>High</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody id="stock-interval-table">
+                  <!-- Data rows will be inserted here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="news" id="stock-news">
+      <div id="header">
+        <h1 ><i class="fa-regular fa-newspaper" id="news-icon"></i>stock News</h1>
+
+      </div>
+      <div class="news-stock">
+        <select name="select-news" id="select-news">
+          <option value="AAPL">Apple Inc.</option>
+          <option value="MSFT">Microsoft Corporation</option>
+          <option value="GOOGL">Alphabet Inc.</option>
+          <option value="AMZN">Amazon.com Inc.</option>
+          <option value="TSLA">Tesla Inc.</option>
+          <option value="FB">Meta Platforms Inc.</option>
+          <option value="BRK.B">Berkshire Hathaway Inc.</option>
+          <option value="NVDA">NVIDIA Corporation</option>
+          <option value="JNJ">Johnson & Johnson</option>
+          <option value="V">Visa Inc.</option>
+          <option value="WMT">Walmart Inc.</option>
+          <option value="JPM">JPMorgan Chase & Co.</option>
+          <option value="PG">Procter & Gamble Co.</option>
+          <option value="MA">Mastercard Inc.</option>
+          <option value="DIS">Walt Disney Co.</option>
+          <option value="PYPL">PayPal Holdings Inc.</option>
+          <option value="NFLX">Netflix Inc.</option>
+          <option value="INTC">Intel Corporation</option>
+          <option value="CSCO">Cisco Systems Inc.</option>
+          <option value="PEP">PepsiCo Inc.</option>
+          <option value="KO">Coca-Cola Company</option>
+          <option value="NKE">Nike Inc.</option>
+          <option value="T">AT&T Inc.</option>
+          <option value="XOM">Exxon Mobil Corporation</option>
+          <option value="VZ">Verizon Communications Inc.</option>
+          <option value="BA">Boeing Co.</option>
+          <option value="MMM">3M Company</option>
+          <option value="MCD">McDonald's Corporation</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="GE">General Electric Company</option>
+          <option value="F">Ford Motor Company</option>
+          <option value="GM">General Motors Company</option>
+          <option value="SBUX">Starbucks Corporation</option>
+          <option value="CVX">Chevron Corporation</option>
+          <option value="ORCL">Oracle Corporation</option>
+          <option value="HON">Honeywell International Inc.</option>
+          <option value="UNH">UnitedHealth Group Incorporated</option>
+          <option value="PFE">Pfizer Inc.</option>
+          <option value="MRK">Merck & Co., Inc.</option>
+          <option value="ABT">Abbott Laboratories</option>
+          <option value="LLY">Eli Lilly and Company</option>
+          <option value="TMO">Thermo Fisher Scientific Inc.</option>
+          <option value="BMY">Bristol-Myers Squibb Company</option>
+          <option value="GILD">Gilead Sciences Inc.</option>
+          <option value="SNY">Sanofi</option>
+          <option value="AZN">AstraZeneca PLC</option>
+          <option value="NVS">Novartis AG</option>
+          <option value="ROG.VX">Roche Holding AG</option>
+          <option value="TSM">Taiwan Semiconductor Manufacturing Company Limited</option>
+          <option value="BABA">Alibaba Group Holding Limited</option>
+          <option value="RIO">Rio Tinto Group</option>
+          <option value="RDS.A">Royal Dutch Shell PLC</option>
+          <option value="BP">BP p.l.c.</option>
+          <option value="TOT">TotalEnergies SE</option>
+          <option value="UL">Unilever PLC</option>
+          <option value="HSBC">HSBC Holdings plc</option>
+          <option value="SNP">China Petroleum & Chemical Corporation</option>
+          <option value="PTR">PetroChina Company Limited</option>
+          <option value="VALE">Vale S.A.</option>
+          <option value="BBL">BHP Group plc</option>
+          <option value="TM">Toyota Motor Corporation</option>
+          <option value="NSRGY">Nestlé S.A.</option>
+          <option value="SAP">SAP SE</option>
+          <option value="ORAN">Orange S.A.</option>
+          <option value="SIEGY">Siemens AG</option>
+          <option value="DTEGY">Deutsche Telekom AG</option>
+          <option value="BAYRY">Bayer AG</option>
+          <option value="SNY">Sanofi</option>
+          <option value="CNI">Canadian National Railway Company</option>
+          <option value="TD">Toronto-Dominion Bank</option>
+          <option value="RY">Royal Bank of Canada</option>
+          <option value="ENB">Enbridge Inc.</option>
+          <option value="SU">Suncor Energy Inc.</option>
+          <option value="MFC">Manulife Financial Corporation</option>
+          <option value="BNS">Bank of Nova Scotia</option>
+          <option value="CS">Credit Suisse Group AG</option>
+          <option value="UBS">UBS Group AG</option>
+          <option value="NOVN.VX">Novartis AG</option>
+          <option value="NESN.VX">Nestlé S.A.</option>
+          <option value="ADBE">Adobe Inc.</option>
+          <option value="CRM">Salesforce.com Inc.</option>
+          <option value="ACN">Accenture plc</option>
+          <option value="AVGO">Broadcom Inc.</option>
+          <option value="TXN">Texas Instruments Incorporated</option>
+          <option value="QCOM">QUALCOMM Incorporated</option>
+          <option value="AMD">Advanced Micro Devices Inc.</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="AMAT">Applied Materials Inc.</option>
+          <option value="ADI">Analog Devices Inc.</option>
+          <option value="LRCX">Lam Research Corporation</option>
+          <option value="MU">Micron Technology Inc.</option>
+          <option value="KLAC">KLA Corporation</option>
+          <option value="NXPI">NXP Semiconductors N.V.</option>
+          <option value="MCHP">Microchip Technology Incorporated</option>
+          <option value="SWKS">Skyworks Solutions Inc.</option>
+          <option value="WDC">Western Digital Corporation</option>
+          <option value="STX">Seagate Technology Holdings PLC</option>
+          <option value="NVTA">Invitae Corporation</option>
+          <option value="ARKK">ARK Innovation ETF</option>
+          <option value="SPY">SPDR S&P 500 ETF Trust</option>
+          <option value="IVV">iShares Core S&P 500 ETF</option>
+          <option value="VOO">Vanguard S&P 500 ETF</option>
+          <option value="QQQ">Invesco QQQ Trust</option>
+          <option value="VTI">Vanguard Total Stock Market ETF</option>
+          <option value="BND">Vanguard Total Bond Market ETF</option>
+          <option value="GLD">SPDR Gold Shares</option>
+          <option value="SLV">iShares Silver Trust</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+          <option value="IWM">iShares Russell 2000 ETF</option>
+          <option value="VT">Vanguard Total World Stock ETF</option>
+          <option value="VEA">Vanguard FTSE Developed Markets ETF</option>
+          <option value="VWO">Vanguard FTSE Emerging Markets ETF</option>
+          <option value="EFA">iShares MSCI EAFE ETF</option>
+          <option value="EEM">iShares MSCI Emerging Markets ETF</option>
+          <option value="IEMG">iShares Core MSCI Emerging Markets ETF</option>
+          <option value="AGG">iShares Core U.S. Aggregate Bond ETF</option>
+          <option value="LQD">iShares iBoxx $ Investment Grade Corporate Bond ETF</option>
+          <option value="HYG">iShares iBoxx $ High Yield Corporate Bond ETF</option>
+          <option value="JNK">SPDR Bloomberg Barclays High Yield Bond ETF</option>
+          <option value="BKLN">Invesco Senior Loan ETF</option>
+          <option value="SHV">iShares Short Treasury Bond ETF</option>
+          <option value="TLT">iShares 20+ Year Treasury Bond ETF</option>
+          <option value="IEF">iShares 7-10 Year Treasury Bond ETF</option>
+          <option value="SHY">iShares 1-3 Year Treasury Bond ETF</option>
+          <option value="MUB">iShares National Muni Bond ETF</option>
+          <option value="PFF">iShares Preferred and Income Securities ETF</option>
+          <option value="PGX">Invesco Preferred ETF</option>
+          <option value="VCSH">Vanguard Short-Term Corporate Bond ETF</option>
+          <option value="VCIT">Vanguard Intermediate-Term Corporate Bond ETF</option>
+          <option value="VGLT">Vanguard Long-Term Treasury ETF</option>
+          <option value="BSV">Vanguard Short-Term Bond ETF</option>
+          <option value="BIV">Vanguard Intermediate-Term Bond ETF</option>
+          <option value="TLH">iShares 10-20 Year Treasury Bond ETF</option>
+          <option value="GLDM">SPDR Gold MiniShares Trust</option>
+          <option value="IAU">iShares Gold Trust</option>
+          <option value="SPLV">Invesco S&P 500 Low Volatility ETF</option>
+          <option value="USMV">iShares MSCI USA Min Vol Factor ETF</option>
+          <option value="MTUM">iShares MSCI USA Momentum Factor ETF</option>
+          <option value="QUAL">iShares MSCI USA Quality Factor ETF</option>
+          <option value="VLUE">iShares MSCI USA Value Factor ETF</option>
+          <option value="SPYG">SPDR S&P 500 Growth ETF</option>
+          <option value="SPYV">SPDR S&P 500 Value ETF</option>
+          <option value="IWF">iShares Russell 1000 Growth ETF</option>
+          <option value="IWD">iShares Russell 1000 Value ETF</option>
+          <option value="IWO">iShares Russell 2000 Growth ETF</option>
+          <option value="IWN">iShares Russell 2000 Value ETF</option>
+          <option value="VBR">Vanguard Small-Cap Value ETF</option>
+          <option value="VBK">Vanguard Small-Cap Growth ETF</option>
+          <option value="VTV">Vanguard Value ETF</option>
+          <option value="VUG">Vanguard Growth ETF</option>
+          <option value="SCHD">Schwab U.S. Dividend Equity ETF</option>
+          <option value="VYM">Vanguard High Dividend Yield ETF</option>
+          <option value="DVY">iShares Select Dividend ETF</option>
+          <option value="SDY">SPDR S&P Dividend ETF</option>
+          <option value="SPHD">Invesco S&P 500 High Dividend Low Volatility ETF</option>
+          <option value="HDV">iShares Core High Dividend ETF</option>
+          <option value="NOBL">ProShares S&P 500 Dividend Aristocrats ETF</option>
+          <option value="VIG">Vanguard Dividend Appreciation ETF</option>
+          <option value="DIA">SPDR Dow Jones Industrial Average ETF Trust</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+
+        </select>
+
+        </select>
+        <button class="button" id="news-button">
+          GET NEWS
+          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <path clip-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <section class="container">
+        <div class="card__container swiper">
+          <div class="card__content">
+            <div class="swiper-wrapper">
+              <!-- Dynamic content will be inserted here -->
+            </div>
+          </div>
+          <div class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></div>
+          <div class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </div>
+
+
+
+    <div class="company-overview" id="stock-company-overview">
+      <div class="overview" id="header">
+        <h1><i id="company-icon" class="fa-solid fa-expand"></i>Company Overview</h1>
+      </div>
+      <div class="stocks">
+        <select name="select-news" id="select-company">
+          <option value="AAPL">Apple Inc.</option>
+          <option value="MSFT">Microsoft Corporation</option>
+          <option value="GOOGL">Alphabet Inc.</option>
+          <option value="AMZN">Amazon.com Inc.</option>
+          <option value="TSLA">Tesla Inc.</option>
+          <option value="FB">Meta Platforms Inc.</option>
+          <option value="BRK.B">Berkshire Hathaway Inc.</option>
+          <option value="NVDA">NVIDIA Corporation</option>
+          <option value="JNJ">Johnson & Johnson</option>
+          <option value="V">Visa Inc.</option>
+          <option value="WMT">Walmart Inc.</option>
+          <option value="JPM">JPMorgan Chase & Co.</option>
+          <option value="PG">Procter & Gamble Co.</option>
+          <option value="MA">Mastercard Inc.</option>
+          <option value="DIS">Walt Disney Co.</option>
+          <option value="PYPL">PayPal Holdings Inc.</option>
+          <option value="NFLX">Netflix Inc.</option>
+          <option value="INTC">Intel Corporation</option>
+          <option value="CSCO">Cisco Systems Inc.</option>
+          <option value="PEP">PepsiCo Inc.</option>
+          <option value="KO">Coca-Cola Company</option>
+          <option value="NKE">Nike Inc.</option>
+          <option value="T">AT&T Inc.</option>
+          <option value="XOM">Exxon Mobil Corporation</option>
+          <option value="VZ">Verizon Communications Inc.</option>
+          <option value="BA">Boeing Co.</option>
+          <option value="MMM">3M Company</option>
+          <option value="MCD">McDonald's Corporation</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="GE">General Electric Company</option>
+          <option value="F">Ford Motor Company</option>
+          <option value="GM">General Motors Company</option>
+          <option value="SBUX">Starbucks Corporation</option>
+          <option value="CVX">Chevron Corporation</option>
+          <option value="ORCL">Oracle Corporation</option>
+          <option value="HON">Honeywell International Inc.</option>
+          <option value="UNH">UnitedHealth Group Incorporated</option>
+          <option value="PFE">Pfizer Inc.</option>
+          <option value="MRK">Merck & Co., Inc.</option>
+          <option value="ABT">Abbott Laboratories</option>
+          <option value="LLY">Eli Lilly and Company</option>
+          <option value="TMO">Thermo Fisher Scientific Inc.</option>
+          <option value="BMY">Bristol-Myers Squibb Company</option>
+          <option value="GILD">Gilead Sciences Inc.</option>
+          <option value="SNY">Sanofi</option>
+          <option value="AZN">AstraZeneca PLC</option>
+          <option value="NVS">Novartis AG</option>
+          <option value="ROG.VX">Roche Holding AG</option>
+          <option value="TSM">Taiwan Semiconductor Manufacturing Company Limited</option>
+          <option value="BABA">Alibaba Group Holding Limited</option>
+          <option value="RIO">Rio Tinto Group</option>
+          <option value="RDS.A">Royal Dutch Shell PLC</option>
+          <option value="BP">BP p.l.c.</option>
+          <option value="TOT">TotalEnergies SE</option>
+          <option value="UL">Unilever PLC</option>
+          <option value="HSBC">HSBC Holdings plc</option>
+          <option value="SNP">China Petroleum & Chemical Corporation</option>
+          <option value="PTR">PetroChina Company Limited</option>
+          <option value="VALE">Vale S.A.</option>
+          <option value="BBL">BHP Group plc</option>
+          <option value="TM">Toyota Motor Corporation</option>
+          <option value="NSRGY">Nestlé S.A.</option>
+          <option value="SAP">SAP SE</option>
+          <option value="ORAN">Orange S.A.</option>
+          <option value="SIEGY">Siemens AG</option>
+          <option value="DTEGY">Deutsche Telekom AG</option>
+          <option value="BAYRY">Bayer AG</option>
+          <option value="SNY">Sanofi</option>
+          <option value="CNI">Canadian National Railway Company</option>
+          <option value="TD">Toronto-Dominion Bank</option>
+          <option value="RY">Royal Bank of Canada</option>
+          <option value="ENB">Enbridge Inc.</option>
+          <option value="SU">Suncor Energy Inc.</option>
+          <option value="MFC">Manulife Financial Corporation</option>
+          <option value="BNS">Bank of Nova Scotia</option>
+          <option value="CS">Credit Suisse Group AG</option>
+          <option value="UBS">UBS Group AG</option>
+          <option value="NOVN.VX">Novartis AG</option>
+          <option value="NESN.VX">Nestlé S.A.</option>
+          <option value="ADBE">Adobe Inc.</option>
+          <option value="CRM">Salesforce.com Inc.</option>
+          <option value="ACN">Accenture plc</option>
+          <option value="AVGO">Broadcom Inc.</option>
+          <option value="TXN">Texas Instruments Incorporated</option>
+          <option value="QCOM">QUALCOMM Incorporated</option>
+          <option value="AMD">Advanced Micro Devices Inc.</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="AMAT">Applied Materials Inc.</option>
+          <option value="ADI">Analog Devices Inc.</option>
+          <option value="LRCX">Lam Research Corporation</option>
+          <option value="MU">Micron Technology Inc.</option>
+          <option value="KLAC">KLA Corporation</option>
+          <option value="NXPI">NXP Semiconductors N.V.</option>
+          <option value="MCHP">Microchip Technology Incorporated</option>
+          <option value="SWKS">Skyworks Solutions Inc.</option>
+          <option value="WDC">Western Digital Corporation</option>
+          <option value="STX">Seagate Technology Holdings PLC</option>
+          <option value="NVTA">Invitae Corporation</option>
+          <option value="ARKK">ARK Innovation ETF</option>
+          <option value="SPY">SPDR S&P 500 ETF Trust</option>
+          <option value="IVV">iShares Core S&P 500 ETF</option>
+          <option value="VOO">Vanguard S&P 500 ETF</option>
+          <option value="QQQ">Invesco QQQ Trust</option>
+          <option value="VTI">Vanguard Total Stock Market ETF</option>
+          <option value="BND">Vanguard Total Bond Market ETF</option>
+          <option value="GLD">SPDR Gold Shares</option>
+          <option value="SLV">iShares Silver Trust</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+          <option value="IWM">iShares Russell 2000 ETF</option>
+          <option value="VT">Vanguard Total World Stock ETF</option>
+          <option value="VEA">Vanguard FTSE Developed Markets ETF</option>
+          <option value="VWO">Vanguard FTSE Emerging Markets ETF</option>
+          <option value="EFA">iShares MSCI EAFE ETF</option>
+          <option value="EEM">iShares MSCI Emerging Markets ETF</option>
+          <option value="IEMG">iShares Core MSCI Emerging Markets ETF</option>
+          <option value="AGG">iShares Core U.S. Aggregate Bond ETF</option>
+          <option value="LQD">iShares iBoxx $ Investment Grade Corporate Bond ETF</option>
+          <option value="HYG">iShares iBoxx $ High Yield Corporate Bond ETF</option>
+          <option value="JNK">SPDR Bloomberg Barclays High Yield Bond ETF</option>
+          <option value="BKLN">Invesco Senior Loan ETF</option>
+          <option value="SHV">iShares Short Treasury Bond ETF</option>
+          <option value="TLT">iShares 20+ Year Treasury Bond ETF</option>
+          <option value="IEF">iShares 7-10 Year Treasury Bond ETF</option>
+          <option value="SHY">iShares 1-3 Year Treasury Bond ETF</option>
+          <option value="MUB">iShares National Muni Bond ETF</option>
+          <option value="PFF">iShares Preferred and Income Securities ETF</option>
+          <option value="PGX">Invesco Preferred ETF</option>
+          <option value="VCSH">Vanguard Short-Term Corporate Bond ETF</option>
+          <option value="VCIT">Vanguard Intermediate-Term Corporate Bond ETF</option>
+          <option value="VGLT">Vanguard Long-Term Treasury ETF</option>
+          <option value="BSV">Vanguard Short-Term Bond ETF</option>
+          <option value="BIV">Vanguard Intermediate-Term Bond ETF</option>
+          <option value="TLH">iShares 10-20 Year Treasury Bond ETF</option>
+          <option value="GLDM">SPDR Gold MiniShares Trust</option>
+          <option value="IAU">iShares Gold Trust</option>
+          <option value="SPLV">Invesco S&P 500 Low Volatility ETF</option>
+          <option value="USMV">iShares MSCI USA Min Vol Factor ETF</option>
+          <option value="MTUM">iShares MSCI USA Momentum Factor ETF</option>
+          <option value="QUAL">iShares MSCI USA Quality Factor ETF</option>
+          <option value="VLUE">iShares MSCI USA Value Factor ETF</option>
+          <option value="SPYG">SPDR S&P 500 Growth ETF</option>
+          <option value="SPYV">SPDR S&P 500 Value ETF</option>
+          <option value="IWF">iShares Russell 1000 Growth ETF</option>
+          <option value="IWD">iShares Russell 1000 Value ETF</option>
+          <option value="IWO">iShares Russell 2000 Growth ETF</option>
+          <option value="IWN">iShares Russell 2000 Value ETF</option>
+          <option value="VBR">Vanguard Small-Cap Value ETF</option>
+          <option value="VBK">Vanguard Small-Cap Growth ETF</option>
+          <option value="VTV">Vanguard Value ETF</option>
+          <option value="VUG">Vanguard Growth ETF</option>
+          <option value="SCHD">Schwab U.S. Dividend Equity ETF</option>
+          <option value="VYM">Vanguard High Dividend Yield ETF</option>
+          <option value="DVY">iShares Select Dividend ETF</option>
+          <option value="SDY">SPDR S&P Dividend ETF</option>
+          <option value="SPHD">Invesco S&P 500 High Dividend Low Volatility ETF</option>
+          <option value="HDV">iShares Core High Dividend ETF</option>
+          <option value="NOBL">ProShares S&P 500 Dividend Aristocrats ETF</option>
+          <option value="VIG">Vanguard Dividend Appreciation ETF</option>
+          <option value="DIA">SPDR Dow Jones Industrial Average ETF Trust</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+
+        </select>
+
+        </select>
+        <button class="button" id="overview-button">
+          GET OVERVIEW
+          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <path clip-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="company-data-container">
+        <div class="company-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th class="">Heading</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody id="company-data">
+              <!-- data inserted dynamically here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="income" id="stock-income-statement">
+      <div class="income-header" id="header">
+        <h1><i class="fa-solid fa-sack-dollar"></i>Company Income Statement</h1>
+      </div>
+      <div class="income-stocks">
+        <select name="select-news" id="select-company-income">
+          <option value="AAPL">Apple Inc.</option>
+          <option value="MSFT">Microsoft Corporation</option>
+          <option value="GOOGL">Alphabet Inc.</option>
+          <option value="AMZN">Amazon.com Inc.</option>
+          <option value="TSLA">Tesla Inc.</option>
+          <option value="FB">Meta Platforms Inc.</option>
+          <option value="BRK.B">Berkshire Hathaway Inc.</option>
+          <option value="NVDA">NVIDIA Corporation</option>
+          <option value="JNJ">Johnson & Johnson</option>
+          <option value="V">Visa Inc.</option>
+          <option value="WMT">Walmart Inc.</option>
+          <option value="JPM">JPMorgan Chase & Co.</option>
+          <option value="PG">Procter & Gamble Co.</option>
+          <option value="MA">Mastercard Inc.</option>
+          <option value="DIS">Walt Disney Co.</option>
+          <option value="PYPL">PayPal Holdings Inc.</option>
+          <option value="NFLX">Netflix Inc.</option>
+          <option value="INTC">Intel Corporation</option>
+          <option value="CSCO">Cisco Systems Inc.</option>
+          <option value="PEP">PepsiCo Inc.</option>
+          <option value="KO">Coca-Cola Company</option>
+          <option value="NKE">Nike Inc.</option>
+          <option value="T">AT&T Inc.</option>
+          <option value="XOM">Exxon Mobil Corporation</option>
+          <option value="VZ">Verizon Communications Inc.</option>
+          <option value="BA">Boeing Co.</option>
+          <option value="MMM">3M Company</option>
+          <option value="MCD">McDonald's Corporation</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="GE">General Electric Company</option>
+          <option value="F">Ford Motor Company</option>
+          <option value="GM">General Motors Company</option>
+          <option value="SBUX">Starbucks Corporation</option>
+          <option value="CVX">Chevron Corporation</option>
+          <option value="ORCL">Oracle Corporation</option>
+          <option value="HON">Honeywell International Inc.</option>
+          <option value="UNH">UnitedHealth Group Incorporated</option>
+          <option value="PFE">Pfizer Inc.</option>
+          <option value="MRK">Merck & Co., Inc.</option>
+          <option value="ABT">Abbott Laboratories</option>
+          <option value="LLY">Eli Lilly and Company</option>
+          <option value="TMO">Thermo Fisher Scientific Inc.</option>
+          <option value="BMY">Bristol-Myers Squibb Company</option>
+          <option value="GILD">Gilead Sciences Inc.</option>
+          <option value="SNY">Sanofi</option>
+          <option value="AZN">AstraZeneca PLC</option>
+          <option value="NVS">Novartis AG</option>
+          <option value="ROG.VX">Roche Holding AG</option>
+          <option value="TSM">Taiwan Semiconductor Manufacturing Company Limited</option>
+          <option value="BABA">Alibaba Group Holding Limited</option>
+          <option value="RIO">Rio Tinto Group</option>
+          <option value="RDS.A">Royal Dutch Shell PLC</option>
+          <option value="BP">BP p.l.c.</option>
+          <option value="TOT">TotalEnergies SE</option>
+          <option value="UL">Unilever PLC</option>
+          <option value="HSBC">HSBC Holdings plc</option>
+          <option value="SNP">China Petroleum & Chemical Corporation</option>
+          <option value="PTR">PetroChina Company Limited</option>
+          <option value="VALE">Vale S.A.</option>
+          <option value="BBL">BHP Group plc</option>
+          <option value="TM">Toyota Motor Corporation</option>
+          <option value="NSRGY">Nestlé S.A.</option>
+          <option value="SAP">SAP SE</option>
+          <option value="ORAN">Orange S.A.</option>
+          <option value="SIEGY">Siemens AG</option>
+          <option value="DTEGY">Deutsche Telekom AG</option>
+          <option value="BAYRY">Bayer AG</option>
+          <option value="SNY">Sanofi</option>
+          <option value="CNI">Canadian National Railway Company</option>
+          <option value="TD">Toronto-Dominion Bank</option>
+          <option value="RY">Royal Bank of Canada</option>
+          <option value="ENB">Enbridge Inc.</option>
+          <option value="SU">Suncor Energy Inc.</option>
+          <option value="MFC">Manulife Financial Corporation</option>
+          <option value="BNS">Bank of Nova Scotia</option>
+          <option value="CS">Credit Suisse Group AG</option>
+          <option value="UBS">UBS Group AG</option>
+          <option value="NOVN.VX">Novartis AG</option>
+          <option value="NESN.VX">Nestlé S.A.</option>
+          <option value="ADBE">Adobe Inc.</option>
+          <option value="CRM">Salesforce.com Inc.</option>
+          <option value="ACN">Accenture plc</option>
+          <option value="AVGO">Broadcom Inc.</option>
+          <option value="TXN">Texas Instruments Incorporated</option>
+          <option value="QCOM">QUALCOMM Incorporated</option>
+          <option value="AMD">Advanced Micro Devices Inc.</option>
+          <option value="IBM">International Business Machines Corporation</option>
+          <option value="AMAT">Applied Materials Inc.</option>
+          <option value="ADI">Analog Devices Inc.</option>
+          <option value="LRCX">Lam Research Corporation</option>
+          <option value="MU">Micron Technology Inc.</option>
+          <option value="KLAC">KLA Corporation</option>
+          <option value="NXPI">NXP Semiconductors N.V.</option>
+          <option value="MCHP">Microchip Technology Incorporated</option>
+          <option value="SWKS">Skyworks Solutions Inc.</option>
+          <option value="WDC">Western Digital Corporation</option>
+          <option value="STX">Seagate Technology Holdings PLC</option>
+          <option value="NVTA">Invitae Corporation</option>
+          <option value="ARKK">ARK Innovation ETF</option>
+          <option value="SPY">SPDR S&P 500 ETF Trust</option>
+          <option value="IVV">iShares Core S&P 500 ETF</option>
+          <option value="VOO">Vanguard S&P 500 ETF</option>
+          <option value="QQQ">Invesco QQQ Trust</option>
+          <option value="VTI">Vanguard Total Stock Market ETF</option>
+          <option value="BND">Vanguard Total Bond Market ETF</option>
+          <option value="GLD">SPDR Gold Shares</option>
+          <option value="SLV">iShares Silver Trust</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+          <option value="IWM">iShares Russell 2000 ETF</option>
+          <option value="VT">Vanguard Total World Stock ETF</option>
+          <option value="VEA">Vanguard FTSE Developed Markets ETF</option>
+          <option value="VWO">Vanguard FTSE Emerging Markets ETF</option>
+          <option value="EFA">iShares MSCI EAFE ETF</option>
+          <option value="EEM">iShares MSCI Emerging Markets ETF</option>
+          <option value="IEMG">iShares Core MSCI Emerging Markets ETF</option>
+          <option value="AGG">iShares Core U.S. Aggregate Bond ETF</option>
+          <option value="LQD">iShares iBoxx $ Investment Grade Corporate Bond ETF</option>
+          <option value="HYG">iShares iBoxx $ High Yield Corporate Bond ETF</option>
+          <option value="JNK">SPDR Bloomberg Barclays High Yield Bond ETF</option>
+          <option value="BKLN">Invesco Senior Loan ETF</option>
+          <option value="SHV">iShares Short Treasury Bond ETF</option>
+          <option value="TLT">iShares 20+ Year Treasury Bond ETF</option>
+          <option value="IEF">iShares 7-10 Year Treasury Bond ETF</option>
+          <option value="SHY">iShares 1-3 Year Treasury Bond ETF</option>
+          <option value="MUB">iShares National Muni Bond ETF</option>
+          <option value="PFF">iShares Preferred and Income Securities ETF</option>
+          <option value="PGX">Invesco Preferred ETF</option>
+          <option value="VCSH">Vanguard Short-Term Corporate Bond ETF</option>
+          <option value="VCIT">Vanguard Intermediate-Term Corporate Bond ETF</option>
+          <option value="VGLT">Vanguard Long-Term Treasury ETF</option>
+          <option value="BSV">Vanguard Short-Term Bond ETF</option>
+          <option value="BIV">Vanguard Intermediate-Term Bond ETF</option>
+          <option value="TLH">iShares 10-20 Year Treasury Bond ETF</option>
+          <option value="GLDM">SPDR Gold MiniShares Trust</option>
+          <option value="IAU">iShares Gold Trust</option>
+          <option value="SPLV">Invesco S&P 500 Low Volatility ETF</option>
+          <option value="USMV">iShares MSCI USA Min Vol Factor ETF</option>
+          <option value="MTUM">iShares MSCI USA Momentum Factor ETF</option>
+          <option value="QUAL">iShares MSCI USA Quality Factor ETF</option>
+          <option value="VLUE">iShares MSCI USA Value Factor ETF</option>
+          <option value="SPYG">SPDR S&P 500 Growth ETF</option>
+          <option value="SPYV">SPDR S&P 500 Value ETF</option>
+          <option value="IWF">iShares Russell 1000 Growth ETF</option>
+          <option value="IWD">iShares Russell 1000 Value ETF</option>
+          <option value="IWO">iShares Russell 2000 Growth ETF</option>
+          <option value="IWN">iShares Russell 2000 Value ETF</option>
+          <option value="VBR">Vanguard Small-Cap Value ETF</option>
+          <option value="VBK">Vanguard Small-Cap Growth ETF</option>
+          <option value="VTV">Vanguard Value ETF</option>
+          <option value="VUG">Vanguard Growth ETF</option>
+          <option value="SCHD">Schwab U.S. Dividend Equity ETF</option>
+          <option value="VYM">Vanguard High Dividend Yield ETF</option>
+          <option value="DVY">iShares Select Dividend ETF</option>
+          <option value="SDY">SPDR S&P Dividend ETF</option>
+          <option value="SPHD">Invesco S&P 500 High Dividend Low Volatility ETF</option>
+          <option value="HDV">iShares Core High Dividend ETF</option>
+          <option value="NOBL">ProShares S&P 500 Dividend Aristocrats ETF</option>
+          <option value="VIG">Vanguard Dividend Appreciation ETF</option>
+          <option value="DIA">SPDR Dow Jones Industrial Average ETF Trust</option>
+          <option value="XLU">Utilities Select Sector SPDR Fund</option>
+          <option value="XLRE">Real Estate Select Sector SPDR Fund</option>
+          <option value="XLK">Technology Select Sector SPDR Fund</option>
+          <option value="XLF">Financial Select Sector SPDR Fund</option>
+          <option value="XLV">Health Care Select Sector SPDR Fund</option>
+          <option value="XLY">Consumer Discretionary Select Sector SPDR Fund</option>
+          <option value="XLI">Industrial Select Sector SPDR Fund</option>
+          <option value="XLP">Consumer Staples Select Sector SPDR Fund</option>
+          <option value="XLE">Energy Select Sector SPDR Fund</option>
+          <option value="XLB">Materials Select Sector SPDR Fund</option>
+  
+        </select>
+  
+        </select>
+        <button class="button" id="income-button">
+          GET STATEMENT
+          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <path clip-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="all-income-data">
+        <div class="dates">
+          <h2>Income Statement For Financial Year</h2>
+          <select name="select-date" id="select-date">
+            <option value="2023">2023</option>
+            <option value="2022" selected>2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+          </select>
+          <h2>To</h2>
+          <select name="end-date" id="end-date">
+            <option value="2023" selected>2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+          </select>
+        </div>     
+      <div class="income-wrapper" id="income-cards">
+<!-- dynamically render data card here -->
+<div class="card">
+  <div class="first-content">
+    <span>First</span>
+  </div>
+  <div class="second-content">
+<span>Second</span>
+  </div>
+
+
+</div>
+      </div>
+      </div>
+      
+
+
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./stocks.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Rate Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <h1><i class="fa-solid fa-landmark icon" ></i></i> FinCryptX</h1>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#morale">Home</a></li>
+        <li><a href="#about-us">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#card-container">Exchange-Rate</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+      </ul>
+      <div class="nav-icon">
+        <button class="icon-btn btn" id="menu-btns"><i id="menu-icon" class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <div class="morale" id="morale">
+        <div class="info">
+            <h1>FinCryptX</h1>
+            <ul>
+                <li>Your Gateway to Financial Markets</li>
+                <li>Navigating Stocks, Crypto, and Exchange Rates</li>
+                <li>Real-Time Market Insights</li>
+                <li>The Future of Trading Information</li>
+            </ul>
+        </div>
+        <div class="img">
+            <img src="./images/undraw_data_re_80ws.svg" alt="vector-image of investment">
+        </div>
+    </div>
+
+
+    <div class="about-us" id="about-us">
+        
+        <div class="about-image">
+            <img src="./images/undraw_success_factors_re_ce93.svg" alt="">
+        </div>
+        <div class="about-txt">
+            <h1>About Us</h1>
+            <p>Welcome to <strong>FinCryptX</strong>! We provide the latest information on stocks, cryptocurrencies, and exchange rates to help you make informed decisions.</p>
+            <ul>
+                <li>Real-Time Updates</li>
+                <li>Expert Analysis</li>
+                <li>User-Friendly Interface</li>
+                <li>Trusted Source</li>
+            </ul>
+            <p>Join our community and stay ahead in the financial markets. Thank you for choosing FinCryptX!</p>
+        </div>
+    </div>
+
+    <div class="card-container" id="card-container">
+      <div class="img-container">
+        <img src="./images/undraw_data_reports_706v.svg" alt="" />
+      </div>
+      <div class="calculator">
+        <h1 class="heading">Exchange Rate Calculator</h1>
+        <p>
+          Current Rate: 1 <span id="source-currency-name"></span> equals
+          <span id="price-target-currency">280</span>
+          <span id="target-currency-name">PKR</span>
+        </p>
+        <div class="currency-container">
+          <img id="source-flag" src="https://flagsapi.com/SA/shiny/64.png" />
+          <select id="source-currency">
+            <option value="USA" data-iso-code="US">+1 - USA - USD</option>
+            <option value="AED" data-iso-code="AE">
+              +971 - United Arab Emirates - AED
+            </option>
+            <option value="AFN" data-iso-code="AF">
+              +93 - Afghanistan - AFN
+            </option>
+            <option value="ALL" data-iso-code="AL">+355 - Albania - ALL</option>
+            <option value="AMD" data-iso-code="AM">+374 - Armenia - AMD</option>
+            <option value="ANG" data-iso-code="AN">
+              +599 - Netherlands Antilles - ANG
+            </option>
+            <option value="AOA" data-iso-code="AO">+244 - Angola - AOA</option>
+            <option value="ARS" data-iso-code="AR">
+              +54 - Argentina - ARS
+            </option>
+            <option value="AUD" data-iso-code="AU">
+              +61 - Australia - AUD
+            </option>
+            <option value="AUD" data-iso-code="CX">
+              +61 - Christmas Island - AUD
+            </option>
+            <option value="AUD" data-iso-code="CC">
+              +61 - Cocos (Keeling) Islands - AUD
+            </option>
+            <option value="AUD" data-iso-code="HM">
+              +672 - Heard Island and Mcdonald Islands - AUD
+            </option>
+            <option value="AUD" data-iso-code="KI">
+              +686 - Kiribati - AUD
+            </option>
+            <option value="AUD" data-iso-code="NR">+674 - Nauru - AUD</option>
+            <option value="AUD" data-iso-code="NF">
+              +672 - Norfolk Island - AUD
+            </option>
+            <option value="AUD" data-iso-code="TV">+688 - Tuvalu - AUD</option>
+            <option value="AWG" data-iso-code="AW">+297 - Aruba - AWG</option>
+            <option value="AZN" data-iso-code="AZ">
+              +994 - Azerbaijan - AZN
+            </option>
+            <option value="BAM" data-iso-code="BA">
+              +387 - Bosnia and Herzegovina - BAM
+            </option>
+            <option value="BBD" data-iso-code="BB">
+              +1246 - Barbados - BBD
+            </option>
+            <option value="BDT" data-iso-code="BD">
+              +880 - Bangladesh - BDT
+            </option>
+            <option value="BGN" data-iso-code="BG">
+              +359 - Bulgaria - BGN
+            </option>
+            <option value="BHD" data-iso-code="BH">+973 - Bahrain - BHD</option>
+            <option value="BIF" data-iso-code="BI">+257 - Burundi - BIF</option>
+            <option value="BMD" data-iso-code="BM">
+              +1441 - Bermuda - BMD
+            </option>
+            <option value="BND" data-iso-code="BN">
+              +673 - Brunei Darussalam - BND
+            </option>
+            <option value="BOB" data-iso-code="BO">
+              +591 - Bolivia, Plurinational State of bolivia - BOB
+            </option>
+            <option value="BRL" data-iso-code="BR">+55 - Brazil - BRL</option>
+            <option value="BSD" data-iso-code="BS">
+              +1242 - Bahamas - BSD
+            </option>
+            <option value="BTN" data-iso-code="BT">+975 - Bhutan - BTN</option>
+            <option value="BWP" data-iso-code="BW">
+              +267 - Botswana - BWP
+            </option>
+            <option value="BYR" data-iso-code="BY">+375 - Belarus - BYR</option>
+            <option value="BZD" data-iso-code="BZ">+501 - Belize - BZD</option>
+            <option value="CAD" data-iso-code="CA">+1 - Canada - CAD</option>
+            <option value="CDF" data-iso-code="CD">
+              +243 - Congo, The Democratic Republic of the Congo - CDF
+            </option>
+            <option value="CHF" data-iso-code="LI">
+              +423 - Liechtenstein - CHF
+            </option>
+            <option value="CHF" data-iso-code="CH">
+              +41 - Switzerland - CHF
+            </option>
+            <option value="CLP" data-iso-code="CL">+56 - Chile - CLP</option>
+            <option value="CNY" data-iso-code="CN">+86 - China - CNY</option>
+            <option value="COP" data-iso-code="CO">+57 - Colombia - COP</option>
+            <option value="CRC" data-iso-code="CR">
+              +506 - Costa Rica - CRC
+            </option>
+            <option value="CUP" data-iso-code="CU">+53 - Cuba - CUP</option>
+            <option value="CVE" data-iso-code="CV">
+              +238 - Cape Verde - CVE
+            </option>
+            <option value="CZK" data-iso-code="CZ">
+              +420 - Czech Republic - CZK
+            </option>
+            <option value="DJF" data-iso-code="DJ">
+              +253 - Djibouti - DJF
+            </option>
+            <option value="DKK" data-iso-code="DK">+45 - Denmark - DKK</option>
+            <option value="DKK" data-iso-code="FO">
+              +298 - Faroe Islands - DKK
+            </option>
+            <option value="DKK" data-iso-code="GL">
+              +299 - Greenland - DKK
+            </option>
+            <option value="DOP" data-iso-code="DO">
+              +1849 - Dominican Republic - DOP
+            </option>
+            <option value="DZD" data-iso-code="DZ">+213 - Algeria - DZD</option>
+            <option value="EGP" data-iso-code="EG">+20 - Egypt - EGP</option>
+            <option value="ERN" data-iso-code="ER">+291 - Eritrea - ERN</option>
+            <option value="ETB" data-iso-code="ET">
+              +251 - Ethiopia - ETB
+            </option>
+            <option value="EUR" data-iso-code="AX">
+              +358 - Åland Islands - EUR
+            </option>
+            <option value="EUR" data-iso-code="AD">+376 - Andorra - EUR</option>
+            <option value="EUR" data-iso-code="AT">+43 - Austria - EUR</option>
+            <option value="EUR" data-iso-code="BE">+32 - Belgium - EUR</option>
+            <option value="EUR" data-iso-code="CY">+357 - Cyprus - EUR</option>
+            <option value="EUR" data-iso-code="EE">+372 - Estonia - EUR</option>
+            <option value="EUR" data-iso-code="FI">+358 - Finland - EUR</option>
+            <option value="EUR" data-iso-code="FR">+33 - France - EUR</option>
+            <option value="EUR" data-iso-code="GF">
+              +594 - French Guiana - EUR
+            </option>
+            <option value="EUR" data-iso-code="TF">
+              +262 - French Southern Territories - EUR
+            </option>
+            <option value="EUR" data-iso-code="DE">+49 - Germany - EUR</option>
+            <option value="EUR" data-iso-code="GR">+30 - Greece - EUR</option>
+            <option value="EUR" data-iso-code="GP">
+              +590 - Guadeloupe - EUR
+            </option>
+            <option value="EUR" data-iso-code="VA">
+              +379 - Holy See (Vatican City State) - EUR
+            </option>
+            <option value="EUR" data-iso-code="IE">+353 - Ireland - EUR</option>
+            <option value="EUR" data-iso-code="IT">+39 - Italy - EUR</option>
+            <option value="EUR" data-iso-code="XK">+383 - Kosovo - EUR</option>
+            <option value="EUR" data-iso-code="LU">
+              +352 - Luxembourg - EUR
+            </option>
+            <option value="EUR" data-iso-code="MT">+356 - Malta - EUR</option>
+            <option value="EUR" data-iso-code="MQ">
+              +596 - Martinique - EUR
+            </option>
+            <option value="EUR" data-iso-code="YT">+262 - Mayotte - EUR</option>
+            <option value="EUR" data-iso-code="MC">+377 - Monaco - EUR</option>
+            <option value="EUR" data-iso-code="ME">
+              +382 - Montenegro - EUR
+            </option>
+            <option value="EUR" data-iso-code="NL">
+              +31 - Netherlands - EUR
+            </option>
+            <option value="EUR" data-iso-code="PT">
+              +351 - Portugal - EUR
+            </option>
+            <option value="EUR" data-iso-code="RE">+262 - Reunion - EUR</option>
+            <option value="EUR" data-iso-code="BL">
+              +590 - Saint Barthelemy - EUR
+            </option>
+            <option value="EUR" data-iso-code="PM">
+              +508 - Saint Pierre and Miquelon - EUR
+            </option>
+            <option value="EUR" data-iso-code="SM">
+              +378 - San Marino - EUR
+            </option>
+            <option value="EUR" data-iso-code="SK">
+              +421 - Slovakia - EUR
+            </option>
+            <option value="EUR" data-iso-code="SI">
+              +386 - Slovenia - EUR
+            </option>
+            <option value="EUR" data-iso-code="ES">+34 - Spain - EUR</option>
+            <option value="FJD" data-iso-code="FJ">+679 - Fiji - FJD</option>
+            <option value="FKP" data-iso-code="FK">
+              +500 - Falkland Islands (Malvinas) - FKP
+            </option>
+            <option value="GBP" data-iso-code="GS">
+              +500 - South Georgia and the South Sandwich Islands - GBP
+            </option>
+            <option value="GBP" data-iso-code="GB">
+              +44 - United Kingdom - GBP
+            </option>
+            <option value="GEL" data-iso-code="GE">+995 - Georgia - GEL</option>
+            <option value="GGP" data-iso-code="GG">+44 - Guernsey - GGP</option>
+            <option value="GHS" data-iso-code="GH">+233 - Ghana - GHS</option>
+            <option value="GIP" data-iso-code="GI">
+              +350 - Gibraltar - GIP
+            </option>
+            <option value="GMD" data-iso-code="GM">+220 - Gambia - GMD</option>
+            <option value="GNF" data-iso-code="GN">+224 - Guinea - GNF</option>
+            <option value="GYD" data-iso-code="GY">+592 - Guyana - GYD</option>
+            <option value="HKD" data-iso-code="HK">
+              +852 - Hong Kong - HKD
+            </option>
+            <option value="HNL" data-iso-code="HN">
+              +504 - Honduras - HNL
+            </option>
+            <option value="HRK" data-iso-code="HR">+385 - Croatia - HRK</option>
+            <option value="HTG" data-iso-code="HT">+509 - Haiti - HTG</option>
+            <option value="HUF" data-iso-code="HU">+36 - Hungary - HUF</option>
+            <option value="IDR" data-iso-code="ID">
+              +62 - Indonesia - IDR
+            </option>
+            <option value="ILS" data-iso-code="IL">+972 - Israel - ILS</option>
+            <option value="IMP" data-iso-code="IM">
+              +44 - Isle of Man - IMP
+            </option>
+            <option value="INR" data-iso-code="IN">+91 - India - INR</option>
+            <option value="IQD" data-iso-code="IQ">+964 - Iraq - IQD</option>
+            <option value="IRR" data-iso-code="IR">
+              +98 - Iran, Islamic Republic of Persian Gulf - IRR
+            </option>
+            <option value="ISK" data-iso-code="IS">+354 - Iceland - ISK</option>
+            <option value="JEP" data-iso-code="JE">+44 - Jersey - JEP</option>
+            <option value="JMD" data-iso-code="JM">
+              +1876 - Jamaica - JMD
+            </option>
+            <option value="JOD" data-iso-code="JO">+962 - Jordan - JOD</option>
+            <option value="JPY" data-iso-code="JP">+81 - Japan - JPY</option>
+            <option value="KES" data-iso-code="KE">+254 - Kenya - KES</option>
+            <option value="KGS" data-iso-code="KG">
+              +996 - Kyrgyzstan - KGS
+            </option>
+            <option value="KHR" data-iso-code="KH">
+              +855 - Cambodia - KHR
+            </option>
+            <option value="KMF" data-iso-code="KM">+269 - Comoros - KMF</option>
+            <option value="KPW" data-iso-code="KP">
+              +850 - Korea, Democratic People's Republic of Korea - KPW
+            </option>
+            <option value="KRW" data-iso-code="KR">
+              +82 - Korea, Republic of South Korea - KRW
+            </option>
+            <option value="KWD" data-iso-code="KW">+965 - Kuwait - KWD</option>
+            <option value="KYD" data-iso-code="KY">
+              +345 - Cayman Islands - KYD
+            </option>
+            <option value="KZT" data-iso-code="KZ">
+              +7 - Kazakhstan - KZT
+            </option>
+            <option value="LAK" data-iso-code="LA">+856 - Laos - LAK</option>
+            <option value="LBP" data-iso-code="LB">+961 - Lebanon - LBP</option>
+            <option value="LKR" data-iso-code="LK">
+              +94 - Sri Lanka - LKR
+            </option>
+            <option value="LRD" data-iso-code="LR">+231 - Liberia - LRD</option>
+            <option value="LSL" data-iso-code="LS">+266 - Lesotho - LSL</option>
+            <option value="LTL" data-iso-code="LT">
+              +370 - Lithuania - LTL
+            </option>
+            <option value="LVL" data-iso-code="LV">+371 - Latvia - LVL</option>
+            <option value="LYD" data-iso-code="LY">
+              +218 - Libyan Arab Jamahiriya - LYD
+            </option>
+            <option value="MAD" data-iso-code="MA">+212 - Morocco - MAD</option>
+            <option value="MDL" data-iso-code="MD">+373 - Moldova - MDL</option>
+            <option value="MKD" data-iso-code="MK">
+              +389 - Macedonia - MKD
+            </option>
+            <option value="MNT" data-iso-code="MN">
+              +976 - Mongolia - MNT
+            </option>
+            <option value="MOP" data-iso-code="MO">+853 - Macao - MOP</option>
+            <option value="MUR" data-iso-code="MU">
+              +230 - Mauritius - MUR
+            </option>
+            <option value="MVR" data-iso-code="MV">
+              +960 - Maldives - MVR
+            </option>
+            <option value="MWK" data-iso-code="MW">+265 - Malawi - MWK</option>
+            <option value="MXN" data-iso-code="MX">+52 - Mexico - MXN</option>
+            <option value="MYR" data-iso-code="MY">+60 - Malaysia - MYR</option>
+            <option value="MZN" data-iso-code="MZ">
+              +258 - Mozambique - MZN
+            </option>
+            <option value="NAD" data-iso-code="NA">+264 - Namibia - NAD</option>
+            <option value="NGN" data-iso-code="NG">+234 - Nigeria - NGN</option>
+            <option value="NIO" data-iso-code="NI">
+              +505 - Nicaragua - NIO
+            </option>
+            <option value="NOK" data-iso-code="BV">
+              +47 - Bouvet Island - NOK
+            </option>
+            <option value="NOK" data-iso-code="NO">+47 - Norway - NOK</option>
+            <option value="NOK" data-iso-code="SJ">
+              +47 - Svalbard and Jan Mayen - NOK
+            </option>
+            <option value="NPR" data-iso-code="NP">+977 - Nepal - NPR</option>
+            <option value="NZD" data-iso-code="CK">
+              +682 - Cook Islands - NZD
+            </option>
+            <option value="NZD" data-iso-code="NZ">
+              +64 - New Zealand - NZD
+            </option>
+            <option value="NZD" data-iso-code="NU">+683 - Niue - NZD</option>
+            <option value="NZD" data-iso-code="PN">+64 - Pitcairn - NZD</option>
+            <option value="NZD" data-iso-code="TK">+690 - Tokelau - NZD</option>
+            <option value="OMR" data-iso-code="OM">+968 - Oman - OMR</option>
+            <option value="PAB" data-iso-code="PA">+507 - Panama - PAB</option>
+            <option value="PEN" data-iso-code="PE">+51 - Peru - PEN</option>
+            <option value="PGK" data-iso-code="PG">
+              +675 - Papua New Guinea - PGK
+            </option>
+            <option value="PHP" data-iso-code="PH">
+              +63 - Philippines - PHP
+            </option>
+            <option value="PKR" data-iso-code="PK" selected>
+              +92 - Pakistan - PKR
+            </option>
+            <option value="PLN" data-iso-code="PL">+48 - Poland - PLN</option>
+            <option value="PYG" data-iso-code="PY">
+              +595 - Paraguay - PYG
+            </option>
+            <option value="QAR" data-iso-code="QA">+974 - Qatar - QAR</option>
+            <option value="RON" data-iso-code="RO">+40 - Romania - RON</option>
+            <option value="RSD" data-iso-code="RS">+381 - Serbia - RSD</option>
+            <option value="RUB" data-iso-code="RU">+7 - Russia - RUB</option>
+            <option value="RWF" data-iso-code="RW">+250 - Rwanda - RWF</option>
+            <option value="SAR" data-iso-code="SA" selected>
+              +966 - Saudi Arabia - SAR
+            </option>
+            <option value="SBD" data-iso-code="SB">
+              +677 - Solomon Islands - SBD
+            </option>
+            <option value="SCR" data-iso-code="SC">
+              +248 - Seychelles - SCR
+            </option>
+            <option value="SDG" data-iso-code="SD">+249 - Sudan - SDG</option>
+            <option value="SEK" data-iso-code="SE">+46 - Sweden - SEK</option>
+            <option value="SGD" data-iso-code="SG">
+              +65 - Singapore - SGD
+            </option>
+            <option value="SHP" data-iso-code="SH">
+              +290 - Saint Helena, Ascension and Tristan Da Cunha - SHP
+            </option>
+            <option value="SLL" data-iso-code="SL">
+              +232 - Sierra Leone - SLL
+            </option>
+            <option value="SOS" data-iso-code="SO">+252 - Somalia - SOS</option>
+            <option value="SRD" data-iso-code="SR">
+              +597 - Suriname - SRD
+            </option>
+            <option value="STD" data-iso-code="ST">
+              +239 - Sao Tome and Principe - STD
+            </option>
+            <option value="SVC" data-iso-code="SV">
+              +503 - El Salvador - SVC
+            </option>
+            <option value="SYP" data-iso-code="SY">
+              +963 - Syrian Arab Republic - SYP
+            </option>
+            <option value="SZL" data-iso-code="SZ">
+              +268 - Swaziland - SZL
+            </option>
+            <option value="THB" data-iso-code="TH">+66 - Thailand - THB</option>
+            <option value="TJS" data-iso-code="TJ">
+              +992 - Tajikistan - TJS
+            </option>
+            <option value="TMT" data-iso-code="TM">
+              +993 - Turkmenistan - TMT
+            </option>
+            <option value="TND" data-iso-code="TN">+216 - Tunisia - TND</option>
+            <option value="TOP" data-iso-code="TO">+676 - Tonga - TOP</option>
+            <option value="TRY" data-iso-code="TR">+90 - Turkey - TRY</option>
+            <option value="TTD" data-iso-code="TT">
+              +1868 - Trinidad and Tobago - TTD
+            </option>
+            <option value="TWD" data-iso-code="TW">+886 - Taiwan - TWD</option>
+            <option value="TZS" data-iso-code="TZ">
+              +255 - Tanzania, United Republic of Tanzania - TZS
+            </option>
+            <option value="UAH" data-iso-code="UA">+380 - Ukraine - UAH</option>
+            <option value="UGX" data-iso-code="UG">+256 - Uganda - UGX</option>
+            <option value="USD" data-iso-code="AS">
+              +1684 - American Samoa - USD
+            </option>
+            <option value="USD" data-iso-code="IO">
+              +246 - British Indian Ocean Territory - USD
+            </option>
+            <option value="USD" data-iso-code="GU">+1671 - Guam - USD</option>
+            <option value="USD" data-iso-code="MH">
+              +692 - Marshall Islands - USD
+            </option>
+            <option value="USD" data-iso-code="FM">
+              +691 - Micronesia, Federated States of Micronesia - USD
+            </option>
+            <option value="USD" data-iso-code="MP">
+              +1670 - Northern Mariana Islands - USD
+            </option>
+            <option value="USD" data-iso-code="PW">+680 - Palau - USD</option>
+            <option value="USD" data-iso-code="PR">
+              +1939 - Puerto Rico - USD
+            </option>
+            <option value="USD" data-iso-code="TL">
+              +670 - Timor-Leste - USD
+            </option>
+            <option value="USD" data-iso-code="TC">
+              +1649 - Turks and Caicos Islands - USD
+            </option>
+            <option value="USD" data-iso-code="US">
+              +1 - United States - USD
+            </option>
+            <option value="USD" data-iso-code="VG">
+              +1284 - Virgin Islands, British - USD
+            </option>
+            <option value="USD" data-iso-code="VI">
+              +1340 - Virgin Islands, U.S. - USD
+            </option>
+            <option value="UYU" data-iso-code="UY">+598 - Uruguay - UYU</option>
+            <option value="UZS" data-iso-code="UZ">
+              +998 - Uzbekistan - UZS
+            </option>
+            <option value="VEF" data-iso-code="VE">
+              +58 - Venezuela, Bolivarian Republic of Venezuela - VEF
+            </option>
+            <option value="VND" data-iso-code="VN">+84 - Vietnam - VND</option>
+            <option value="VUV" data-iso-code="VU">+678 - Vanuatu - VUV</option>
+            <option value="WST" data-iso-code="WS">+685 - Samoa - WST</option>
+            <option value="XAF" data-iso-code="CM">
+              +237 - Cameroon - XAF
+            </option>
+            <option value="XAF" data-iso-code="CF">
+              +236 - Central African Republic - XAF
+            </option>
+            <option value="XAF" data-iso-code="TD">+235 - Chad - XAF</option>
+            <option value="XAF" data-iso-code="CG">+242 - Congo - XAF</option>
+            <option value="XAF" data-iso-code="GQ">
+              +240 - Equatorial Guinea - XAF
+            </option>
+            <option value="XAF" data-iso-code="GA">+241 - Gabon - XAF</option>
+            <option value="XCD" data-iso-code="AI">
+              +1264 - Anguilla - XCD
+            </option>
+            <option value="XCD" data-iso-code="AQ">
+              +672 - Antarctica - XCD
+            </option>
+            <option value="XCD" data-iso-code="AG">
+              +1268 - Antigua and Barbuda - XCD
+            </option>
+            <option value="XCD" data-iso-code="DM">
+              +1767 - Dominica - XCD
+            </option>
+            <option value="XCD" data-iso-code="GD">
+              +1473 - Grenada - XCD
+            </option>
+            <option value="XCD" data-iso-code="MS">
+              +1664 - Montserrat - XCD
+            </option>
+            <option value="XCD" data-iso-code="KN">
+              +1869 - Saint Kitts and Nevis - XCD
+            </option>
+            <option value="XCD" data-iso-code="LC">
+              +1758 - Saint Lucia - XCD
+            </option>
+            <option value="XCD" data-iso-code="MF">
+              +590 - Saint Martin - XCD
+            </option>
+            <option value="XCD" data-iso-code="VC">
+              +1784 - Saint Vincent and the Grenadines - XCD
+            </option>
+            <option value="XOF" data-iso-code="BJ">+229 - Benin - XOF</option>
+            <option value="XOF" data-iso-code="BF">
+              +226 - Burkina Faso - XOF
+            </option>
+            <option value="XOF" data-iso-code="CI">
+              +225 - Cote d'Ivoire - XOF
+            </option>
+            <option value="XOF" data-iso-code="ML">+223 - Mali - XOF</option>
+            <option value="XOF" data-iso-code="NE">+227 - Niger - XOF</option>
+            <option value="XOF" data-iso-code="SN">+221 - Senegal - XOF</option>
+            <option value="XOF" data-iso-code="TG">+228 - Togo - XOF</option>
+            <option value="XPF" data-iso-code="PF">
+              +689 - French Polynesia - XPF
+            </option>
+            <option value="XPF" data-iso-code="NC">
+              +687 - New Caledonia - XPF
+            </option>
+            <option value="XPF" data-iso-code="WF">
+              +681 - Wallis and Futuna - XPF
+            </option>
+            <option value="YER" data-iso-code="YE">+967 - Yemen - YER</option>
+            <option value="ZAR" data-iso-code="ZA">
+              +27 - South Africa - ZAR
+            </option>
+            <option value="ZMW" data-iso-code="ZM">+260 - Zambia - ZMW</option>
+
+            <input type="number" id="source-currency-amount" placeholder="1" />
+          </select>
+        </div> 
+        <button class="swap" id="swap">
+          <i class="fa-solid fa-rotate"></i>
+        </button>
+        <div class="currency-container">
+          <img id="target-flag" src="https://flagsapi.com/PK/shiny/64.png" />
+          <select id="target-currency">
+            <option value="AED" data-iso-code="AE">
+              +971 - United Arab Emirates - AED
+            </option>
+            <option value="AFN" data-iso-code="AF">
+              +93 - Afghanistan - AFN
+            </option>
+            <option value="ALL" data-iso-code="AL">+355 - Albania - ALL</option>
+            <option value="AMD" data-iso-code="AM">+374 - Armenia - AMD</option>
+            <option value="ANG" data-iso-code="AN">
+              +599 - Netherlands Antilles - ANG
+            </option>
+            <option value="AOA" data-iso-code="AO">+244 - Angola - AOA</option>
+            <option value="ARS" data-iso-code="AR">
+              +54 - Argentina - ARS
+            </option>
+            <option value="AUD" data-iso-code="AU">
+              +61 - Australia - AUD
+            </option>
+            <option value="AUD" data-iso-code="CX">
+              +61 - Christmas Island - AUD
+            </option>
+            <option value="AUD" data-iso-code="CC">
+              +61 - Cocos (Keeling) Islands - AUD
+            </option>
+            <option value="AUD" data-iso-code="HM">
+              +672 - Heard Island and Mcdonald Islands - AUD
+            </option>
+            <option value="AUD" data-iso-code="KI">
+              +686 - Kiribati - AUD
+            </option>
+            <option value="AUD" data-iso-code="NR">+674 - Nauru - AUD</option>
+            <option value="AUD" data-iso-code="NF">
+              +672 - Norfolk Island - AUD
+            </option>
+            <option value="AUD" data-iso-code="TV">+688 - Tuvalu - AUD</option>
+            <option value="AWG" data-iso-code="AW">+297 - Aruba - AWG</option>
+            <option value="AZN" data-iso-code="AZ">
+              +994 - Azerbaijan - AZN
+            </option>
+            <option value="BAM" data-iso-code="BA">
+              +387 - Bosnia and Herzegovina - BAM
+            </option>
+            <option value="BBD" data-iso-code="BB">
+              +1246 - Barbados - BBD
+            </option>
+            <option value="BDT" data-iso-code="BD">
+              +880 - Bangladesh - BDT
+            </option>
+            <option value="BGN" data-iso-code="BG">
+              +359 - Bulgaria - BGN
+            </option>
+            <option value="BHD" data-iso-code="BH">+973 - Bahrain - BHD</option>
+            <option value="BIF" data-iso-code="BI">+257 - Burundi - BIF</option>
+            <option value="BMD" data-iso-code="BM">
+              +1441 - Bermuda - BMD
+            </option>
+            <option value="BND" data-iso-code="BN">
+              +673 - Brunei Darussalam - BND
+            </option>
+            <option value="BOB" data-iso-code="BO">
+              +591 - Bolivia, Plurinational State of bolivia - BOB
+            </option>
+            <option value="BRL" data-iso-code="BR">+55 - Brazil - BRL</option>
+            <option value="BSD" data-iso-code="BS">
+              +1242 - Bahamas - BSD
+            </option>
+            <option value="BTN" data-iso-code="BT">+975 - Bhutan - BTN</option>
+            <option value="BWP" data-iso-code="BW">
+              +267 - Botswana - BWP
+            </option>
+            <option value="BYR" data-iso-code="BY">+375 - Belarus - BYR</option>
+            <option value="BZD" data-iso-code="BZ">+501 - Belize - BZD</option>
+            <option value="CAD" data-iso-code="CA">+1 - Canada - CAD</option>
+            <option value="CDF" data-iso-code="CD">
+              +243 - Congo, The Democratic Republic of the Congo - CDF
+            </option>
+            <option value="CHF" data-iso-code="LI">
+              +423 - Liechtenstein - CHF
+            </option>
+            <option value="CHF" data-iso-code="CH">
+              +41 - Switzerland - CHF
+            </option>
+            <option value="CLP" data-iso-code="CL">+56 - Chile - CLP</option>
+            <option value="CNY" data-iso-code="CN">+86 - China - CNY</option>
+            <option value="COP" data-iso-code="CO">+57 - Colombia - COP</option>
+            <option value="CRC" data-iso-code="CR">
+              +506 - Costa Rica - CRC
+            </option>
+            <option value="CUP" data-iso-code="CU">+53 - Cuba - CUP</option>
+            <option value="CVE" data-iso-code="CV">
+              +238 - Cape Verde - CVE
+            </option>
+            <option value="CZK" data-iso-code="CZ">
+              +420 - Czech Republic - CZK
+            </option>
+            <option value="DJF" data-iso-code="DJ">
+              +253 - Djibouti - DJF
+            </option>
+            <option value="DKK" data-iso-code="DK">+45 - Denmark - DKK</option>
+            <option value="DKK" data-iso-code="FO">
+              +298 - Faroe Islands - DKK
+            </option>
+            <option value="DKK" data-iso-code="GL">
+              +299 - Greenland - DKK
+            </option>
+            <option value="DOP" data-iso-code="DO">
+              +1849 - Dominican Republic - DOP
+            </option>
+            <option value="DZD" data-iso-code="DZ">+213 - Algeria - DZD</option>
+            <option value="EGP" data-iso-code="EG">+20 - Egypt - EGP</option>
+            <option value="ERN" data-iso-code="ER">+291 - Eritrea - ERN</option>
+            <option value="ETB" data-iso-code="ET">
+              +251 - Ethiopia - ETB
+            </option>
+            <option value="EUR" data-iso-code="AX">
+              +358 - Åland Islands - EUR
+            </option>
+            <option value="EUR" data-iso-code="AD">+376 - Andorra - EUR</option>
+            <option value="EUR" data-iso-code="AT">+43 - Austria - EUR</option>
+            <option value="EUR" data-iso-code="BE">+32 - Belgium - EUR</option>
+            <option value="EUR" data-iso-code="CY">+357 - Cyprus - EUR</option>
+            <option value="EUR" data-iso-code="EE">+372 - Estonia - EUR</option>
+            <option value="EUR" data-iso-code="FI">+358 - Finland - EUR</option>
+            <option value="EUR" data-iso-code="FR">+33 - France - EUR</option>
+            <option value="EUR" data-iso-code="GF">
+              +594 - French Guiana - EUR
+            </option>
+            <option value="EUR" data-iso-code="TF">
+              +262 - French Southern Territories - EUR
+            </option>
+            <option value="EUR" data-iso-code="DE">+49 - Germany - EUR</option>
+            <option value="EUR" data-iso-code="GR">+30 - Greece - EUR</option>
+            <option value="EUR" data-iso-code="GP">
+              +590 - Guadeloupe - EUR
+            </option>
+            <option value="EUR" data-iso-code="VA">
+              +379 - Holy See (Vatican City State) - EUR
+            </option>
+            <option value="EUR" data-iso-code="IE">+353 - Ireland - EUR</option>
+            <option value="EUR" data-iso-code="IT">+39 - Italy - EUR</option>
+            <option value="EUR" data-iso-code="XK">+383 - Kosovo - EUR</option>
+            <option value="EUR" data-iso-code="LU">
+              +352 - Luxembourg - EUR
+            </option>
+            <option value="EUR" data-iso-code="MT">+356 - Malta - EUR</option>
+            <option value="EUR" data-iso-code="MQ">
+              +596 - Martinique - EUR
+            </option>
+            <option value="EUR" data-iso-code="YT">+262 - Mayotte - EUR</option>
+            <option value="EUR" data-iso-code="MC">+377 - Monaco - EUR</option>
+            <option value="EUR" data-iso-code="ME">
+              +382 - Montenegro - EUR
+            </option>
+            <option value="EUR" data-iso-code="NL">
+              +31 - Netherlands - EUR
+            </option>
+            <option value="EUR" data-iso-code="PT">
+              +351 - Portugal - EUR
+            </option>
+            <option value="EUR" data-iso-code="RE">+262 - Reunion - EUR</option>
+            <option value="EUR" data-iso-code="BL">
+              +590 - Saint Barthelemy - EUR
+            </option>
+            <option value="EUR" data-iso-code="PM">
+              +508 - Saint Pierre and Miquelon - EUR
+            </option>
+            <option value="EUR" data-iso-code="SM">
+              +378 - San Marino - EUR
+            </option>
+            <option value="EUR" data-iso-code="SK">
+              +421 - Slovakia - EUR
+            </option>
+            <option value="EUR" data-iso-code="SI">
+              +386 - Slovenia - EUR
+            </option>
+            <option value="EUR" data-iso-code="ES">+34 - Spain - EUR</option>
+            <option value="FJD" data-iso-code="FJ">+679 - Fiji - FJD</option>
+            <option value="FKP" data-iso-code="FK">
+              +500 - Falkland Islands (Malvinas) - FKP
+            </option>
+            <option value="GBP" data-iso-code="GS">
+              +500 - South Georgia and the South Sandwich Islands - GBP
+            </option>
+            <option value="GBP" data-iso-code="GB">
+              +44 - United Kingdom - GBP
+            </option>
+            <option value="GEL" data-iso-code="GE">+995 - Georgia - GEL</option>
+            <option value="GGP" data-iso-code="GG">+44 - Guernsey - GGP</option>
+            <option value="GHS" data-iso-code="GH">+233 - Ghana - GHS</option>
+            <option value="GIP" data-iso-code="GI">
+              +350 - Gibraltar - GIP
+            </option>
+            <option value="GMD" data-iso-code="GM">+220 - Gambia - GMD</option>
+            <option value="GNF" data-iso-code="GN">+224 - Guinea - GNF</option>
+            <option value="GYD" data-iso-code="GY">+592 - Guyana - GYD</option>
+            <option value="HKD" data-iso-code="HK">
+              +852 - Hong Kong - HKD
+            </option>
+            <option value="HNL" data-iso-code="HN">
+              +504 - Honduras - HNL
+            </option>
+            <option value="HRK" data-iso-code="HR">+385 - Croatia - HRK</option>
+            <option value="HTG" data-iso-code="HT">+509 - Haiti - HTG</option>
+            <option value="HUF" data-iso-code="HU">+36 - Hungary - HUF</option>
+            <option value="IDR" data-iso-code="ID">
+              +62 - Indonesia - IDR
+            </option>
+            <option value="ILS" data-iso-code="IL">+972 - Israel - ILS</option>
+            <option value="IMP" data-iso-code="IM">
+              +44 - Isle of Man - IMP
+            </option>
+            <option value="INR" data-iso-code="IN">+91 - India - INR</option>
+            <option value="IQD" data-iso-code="IQ">+964 - Iraq - IQD</option>
+            <option value="IRR" data-iso-code="IR">
+              +98 - Iran, Islamic Republic of Persian Gulf - IRR
+            </option>
+            <option value="ISK" data-iso-code="IS">+354 - Iceland - ISK</option>
+            <option value="JEP" data-iso-code="JE">+44 - Jersey - JEP</option>
+            <option value="JMD" data-iso-code="JM">
+              +1876 - Jamaica - JMD
+            </option>
+            <option value="JOD" data-iso-code="JO">+962 - Jordan - JOD</option>
+            <option value="JPY" data-iso-code="JP">+81 - Japan - JPY</option>
+            <option value="KES" data-iso-code="KE">+254 - Kenya - KES</option>
+            <option value="KGS" data-iso-code="KG">
+              +996 - Kyrgyzstan - KGS
+            </option>
+            <option value="KHR" data-iso-code="KH">
+              +855 - Cambodia - KHR
+            </option>
+            <option value="KMF" data-iso-code="KM">+269 - Comoros - KMF</option>
+            <option value="KPW" data-iso-code="KP">
+              +850 - Korea, Democratic People's Republic of Korea - KPW
+            </option>
+            <option value="KRW" data-iso-code="KR">
+              +82 - Korea, Republic of South Korea - KRW
+            </option>
+            <option value="KWD" data-iso-code="KW">+965 - Kuwait - KWD</option>
+            <option value="KYD" data-iso-code="KY">
+              +345 - Cayman Islands - KYD
+            </option>
+            <option value="KZT" data-iso-code="KZ">
+              +7 - Kazakhstan - KZT
+            </option>
+            <option value="LAK" data-iso-code="LA">+856 - Laos - LAK</option>
+            <option value="LBP" data-iso-code="LB">+961 - Lebanon - LBP</option>
+            <option value="LKR" data-iso-code="LK">
+              +94 - Sri Lanka - LKR
+            </option>
+            <option value="LRD" data-iso-code="LR">+231 - Liberia - LRD</option>
+            <option value="LSL" data-iso-code="LS">+266 - Lesotho - LSL</option>
+            <option value="LTL" data-iso-code="LT">
+              +370 - Lithuania - LTL
+            </option>
+            <option value="LVL" data-iso-code="LV">+371 - Latvia - LVL</option>
+            <option value="LYD" data-iso-code="LY">
+              +218 - Libyan Arab Jamahiriya - LYD
+            </option>
+            <option value="MAD" data-iso-code="MA">+212 - Morocco - MAD</option>
+            <option value="MDL" data-iso-code="MD">+373 - Moldova - MDL</option>
+            <option value="MKD" data-iso-code="MK">
+              +389 - Macedonia - MKD
+            </option>
+            <option value="MNT" data-iso-code="MN">
+              +976 - Mongolia - MNT
+            </option>
+            <option value="MOP" data-iso-code="MO">+853 - Macao - MOP</option>
+            <option value="MUR" data-iso-code="MU">
+              +230 - Mauritius - MUR
+            </option>
+            <option value="MVR" data-iso-code="MV">
+              +960 - Maldives - MVR
+            </option>
+            <option value="MWK" data-iso-code="MW">+265 - Malawi - MWK</option>
+            <option value="MXN" data-iso-code="MX">+52 - Mexico - MXN</option>
+            <option value="MYR" data-iso-code="MY">+60 - Malaysia - MYR</option>
+            <option value="MZN" data-iso-code="MZ">
+              +258 - Mozambique - MZN
+            </option>
+            <option value="NAD" data-iso-code="NA">+264 - Namibia - NAD</option>
+            <option value="NGN" data-iso-code="NG">+234 - Nigeria - NGN</option>
+            <option value="NIO" data-iso-code="NI">
+              +505 - Nicaragua - NIO
+            </option>
+            <option value="NOK" data-iso-code="BV">
+              +47 - Bouvet Island - NOK
+            </option>
+            <option value="NOK" data-iso-code="NO">+47 - Norway - NOK</option>
+            <option value="NOK" data-iso-code="SJ">
+              +47 - Svalbard and Jan Mayen - NOK
+            </option>
+            <option value="NPR" data-iso-code="NP">+977 - Nepal - NPR</option>
+            <option value="NZD" data-iso-code="CK">
+              +682 - Cook Islands - NZD
+            </option>
+            <option value="NZD" data-iso-code="NZ">
+              +64 - New Zealand - NZD
+            </option>
+            <option value="NZD" data-iso-code="NU">+683 - Niue - NZD</option>
+            <option value="NZD" data-iso-code="PN">+64 - Pitcairn - NZD</option>
+            <option value="NZD" data-iso-code="TK">+690 - Tokelau - NZD</option>
+            <option value="OMR" data-iso-code="OM">+968 - Oman - OMR</option>
+            <option value="PAB" data-iso-code="PA">+507 - Panama - PAB</option>
+            <option value="PEN" data-iso-code="PE">+51 - Peru - PEN</option>
+            <option value="PGK" data-iso-code="PG">
+              +675 - Papua New Guinea - PGK
+            </option>
+            <option value="PHP" data-iso-code="PH">
+              +63 - Philippines - PHP
+            </option>
+            <option value="PKR" data-iso-code="PK" selected>
+              +92 - Pakistan - PKR
+            </option>
+            <option value="PLN" data-iso-code="PL">+48 - Poland - PLN</option>
+            <option value="PYG" data-iso-code="PY">
+              +595 - Paraguay - PYG
+            </option>
+            <option value="QAR" data-iso-code="QA">+974 - Qatar - QAR</option>
+            <option value="RON" data-iso-code="RO">+40 - Romania - RON</option>
+            <option value="RSD" data-iso-code="RS">+381 - Serbia - RSD</option>
+            <option value="RUB" data-iso-code="RU">+7 - Russia - RUB</option>
+            <option value="RWF" data-iso-code="RW">+250 - Rwanda - RWF</option>
+            <option value="SAR" data-iso-code="SA">
+              +966 - Saudi Arabia - SAR
+            </option>
+            <option value="SBD" data-iso-code="SB">
+              +677 - Solomon Islands - SBD
+            </option>
+            <option value="SCR" data-iso-code="SC">
+              +248 - Seychelles - SCR
+            </option>
+            <option value="SDG" data-iso-code="SD">+249 - Sudan - SDG</option>
+            <option value="SEK" data-iso-code="SE">+46 - Sweden - SEK</option>
+            <option value="SGD" data-iso-code="SG">
+              +65 - Singapore - SGD
+            </option>
+            <option value="SHP" data-iso-code="SH">
+              +290 - Saint Helena, Ascension and Tristan Da Cunha - SHP
+            </option>
+            <option value="SLL" data-iso-code="SL">
+              +232 - Sierra Leone - SLL
+            </option>
+            <option value="SOS" data-iso-code="SO">+252 - Somalia - SOS</option>
+            <option value="SRD" data-iso-code="SR">
+              +597 - Suriname - SRD
+            </option>
+            <option value="STD" data-iso-code="ST">
+              +239 - Sao Tome and Principe - STD
+            </option>
+            <option value="SVC" data-iso-code="SV">
+              +503 - El Salvador - SVC
+            </option>
+            <option value="SYP" data-iso-code="SY">
+              +963 - Syrian Arab Republic - SYP
+            </option>
+            <option value="SZL" data-iso-code="SZ">
+              +268 - Swaziland - SZL
+            </option>
+            <option value="THB" data-iso-code="TH">+66 - Thailand - THB</option>
+            <option value="TJS" data-iso-code="TJ">
+              +992 - Tajikistan - TJS
+            </option>
+            <option value="TMT" data-iso-code="TM">
+              +993 - Turkmenistan - TMT
+            </option>
+            <option value="TND" data-iso-code="TN">+216 - Tunisia - TND</option>
+            <option value="TOP" data-iso-code="TO">+676 - Tonga - TOP</option>
+            <option value="TRY" data-iso-code="TR">+90 - Turkey - TRY</option>
+            <option value="TTD" data-iso-code="TT">
+              +1868 - Trinidad and Tobago - TTD
+            </option>
+            <option value="TWD" data-iso-code="TW">+886 - Taiwan - TWD</option>
+            <option value="TZS" data-iso-code="TZ">
+              +255 - Tanzania, United Republic of Tanzania - TZS
+            </option>
+            <option value="UAH" data-iso-code="UA">+380 - Ukraine - UAH</option>
+            <option value="UGX" data-iso-code="UG">+256 - Uganda - UGX</option>
+            <option value="USD" data-iso-code="AS">
+              +1684 - American Samoa - USD
+            </option>
+            <option value="USD" data-iso-code="IO">
+              +246 - British Indian Ocean Territory - USD
+            </option>
+            <option value="USD" data-iso-code="GU">+1671 - Guam - USD</option>
+            <option value="USD" data-iso-code="MH">
+              +692 - Marshall Islands - USD
+            </option>
+            <option value="USD" data-iso-code="FM">
+              +691 - Micronesia, Federated States of Micronesia - USD
+            </option>
+            <option value="USD" data-iso-code="MP">
+              +1670 - Northern Mariana Islands - USD
+            </option>
+            <option value="USD" data-iso-code="PW">+680 - Palau - USD</option>
+            <option value="USD" data-iso-code="PR">
+              +1939 - Puerto Rico - USD
+            </option>
+            <option value="USD" data-iso-code="TL">
+              +670 - Timor-Leste - USD
+            </option>
+            <option value="USD" data-iso-code="TC">
+              +1649 - Turks and Caicos Islands - USD
+            </option>
+            <option value="USD" data-iso-code="US">
+              +1 - United States - USD
+            </option>
+            <option value="USD" data-iso-code="VG">
+              +1284 - Virgin Islands, British - USD
+            </option>
+            <option value="USD" data-iso-code="VI">
+              +1340 - Virgin Islands, U.S. - USD
+            </option>
+            <option value="UYU" data-iso-code="UY">+598 - Uruguay - UYU</option>
+            <option value="UZS" data-iso-code="UZ">
+              +998 - Uzbekistan - UZS
+            </option>
+            <option value="VEF" data-iso-code="VE">
+              +58 - Venezuela, Bolivarian Republic of Venezuela - VEF
+            </option>
+            <option value="VND" data-iso-code="VN">+84 - Vietnam - VND</option>
+            <option value="VUV" data-iso-code="VU">+678 - Vanuatu - VUV</option>
+            <option value="WST" data-iso-code="WS">+685 - Samoa - WST</option>
+            <option value="XAF" data-iso-code="CM">
+              +237 - Cameroon - XAF
+            </option>
+            <option value="XAF" data-iso-code="CF">
+              +236 - Central African Republic - XAF
+            </option>
+            <option value="XAF" data-iso-code="TD">+235 - Chad - XAF</option>
+            <option value="XAF" data-iso-code="CG">+242 - Congo - XAF</option>
+            <option value="XAF" data-iso-code="GQ">
+              +240 - Equatorial Guinea - XAF
+            </option>
+            <option value="XAF" data-iso-code="GA">+241 - Gabon - XAF</option>
+            <option value="XCD" data-iso-code="AI">
+              +1264 - Anguilla - XCD
+            </option>
+            <option value="XCD" data-iso-code="AQ">
+              +672 - Antarctica - XCD
+            </option>
+            <option value="XCD" data-iso-code="AG">
+              +1268 - Antigua and Barbuda - XCD
+            </option>
+            <option value="XCD" data-iso-code="DM">
+              +1767 - Dominica - XCD
+            </option>
+            <option value="XCD" data-iso-code="GD">
+              +1473 - Grenada - XCD
+            </option>
+            <option value="XCD" data-iso-code="MS">
+              +1664 - Montserrat - XCD
+            </option>
+            <option value="XCD" data-iso-code="KN">
+              +1869 - Saint Kitts and Nevis - XCD
+            </option>
+            <option value="XCD" data-iso-code="LC">
+              +1758 - Saint Lucia - XCD
+            </option>
+            <option value="XCD" data-iso-code="MF">
+              +590 - Saint Martin - XCD
+            </option>
+            <option value="XCD" data-iso-code="VC">
+              +1784 - Saint Vincent and the Grenadines - XCD
+            </option>
+            <option value="XOF" data-iso-code="BJ">+229 - Benin - XOF</option>
+            <option value="XOF" data-iso-code="BF">
+              +226 - Burkina Faso - XOF
+            </option>
+            <option value="XOF" data-iso-code="CI">
+              +225 - Cote d'Ivoire - XOF
+            </option>
+            <option value="XOF" data-iso-code="ML">+223 - Mali - XOF</option>
+            <option value="XOF" data-iso-code="NE">+227 - Niger - XOF</option>
+            <option value="XOF" data-iso-code="SN">+221 - Senegal - XOF</option>
+            <option value="XOF" data-iso-code="TG">+228 - Togo - XOF</option>
+            <option value="XPF" data-iso-code="PF">
+              +689 - French Polynesia - XPF
+            </option>
+            <option value="XPF" data-iso-code="NC">
+              +687 - New Caledonia - XPF
+            </option>
+            <option value="XPF" data-iso-code="WF">
+              +681 - Wallis and Futuna - XPF
+            </option>
+            <option value="YER" data-iso-code="YE">+967 - Yemen - YER</option>
+            <option value="ZAR" data-iso-code="ZA">
+              +27 - South Africa - ZAR
+            </option>
+            <option value="ZMW" data-iso-code="ZM">+260 - Zambia - ZMW</option>
+
+            <input type="number" id="target-currency-amount" disabled />
+          </select>
+        </div>
+        <button class="reset" id="reset">Reset</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footerContainer">
+          <div class="socialIcons">
+              <a href="https://www.facebook.com/atib.khan.712/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/muhammadateeb_7/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://x.com/alam_Rajput1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/muhammad-ateeb-alam-a80520262/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <div class="footerNav">
+              <ul><li><a href="">Home</a></li>
+                  <li><a href="">News</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Contact Me</a></li>
+                  <li><a href="">Follow Me</a></li>
+              </ul>
+          </div>
+          
+      </div>
+      <div class="footerBottom">
+          <p>Copyright &copy;2023; Designed by <span class="designer">Muhammad Ateeb</span></p>
+      </div>
+  </footer>
+    <script src="./script.js"></script>
+    <!-- <script src="./countries.js"></script> -->
+  </body>
+</html>
